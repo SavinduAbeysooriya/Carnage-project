@@ -1,0 +1,410 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product - Carnage | Sri Lanka's #1 Active & Lifestyle Brand</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/product.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="dark-mode">
+  <!-- Header/Navbar -->
+  <header class="header scrolled">
+    <div class="container">
+      <div class="navbar">
+        <a href="index.html" class="logo">CARNAGE</a>
+        
+        <nav class="nav-menu">
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html" class="active">Shop</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        
+        <div class="nav-icons">
+          <button id="search-toggle" aria-label="Search">
+            <i class="fas fa-search"></i>
+          </button>
+          <a href="cart.html" class="cart-icon" aria-label="Cart">
+            <i class="fas fa-shopping-bag"></i>
+            <span class="cart-count">0</span>
+          </a>
+          <a href="account.html" class="account-icon hide-mobile" aria-label="Account">
+            <i class="fas fa-user"></i>
+          </a>
+          <button id="theme-toggle" aria-label="Toggle theme">
+            <i class="fas fa-moon"></i>
+          </button>
+          <button id="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="Menu">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+      
+      <div class="search-container" id="search-container">
+        <div class="search-form">
+          <input type="text" placeholder="Search products...">
+          <button type="submit">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="mobile-menu">
+    <div class="mobile-menu-container">
+      <nav class="mobile-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="account.html">Account</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Product Detail Page Content -->
+  <section class="product-detail section">
+    <div class="container">
+      <!-- Breadcrumbs -->
+      <div class="breadcrumbs">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <a href="shop.html">Shop</a>
+        <span>/</span>
+        <a href="#" id="category-breadcrumb">Category</a>
+        <span>/</span>
+        <span id="product-name-breadcrumb">Product Name</span>
+      </div>
+      
+      <!-- Product skeleton loader -->
+      <div id="product-detail-skeleton" class="product-detail-skeleton">
+        <div class="product-gallery-skeleton"></div>
+        <div class="product-info-skeleton">
+          <div class="skeleton-line"></div>
+          <div class="skeleton-line short"></div>
+          <div class="skeleton-line medium"></div>
+          <div class="skeleton-block"></div>
+          <div class="skeleton-line"></div>
+          <div class="skeleton-line"></div>
+          <div class="skeleton-line short"></div>
+        </div>
+      </div>
+      
+      <!-- Product detail content -->
+      <div id="product-detail-content" class="product-detail-content" style="display: none;">
+        <div class="product-gallery" id="product-gallery">
+          <div class="main-image-container">
+            <img id="main-product-image" src="" alt="" class="main-product-image">
+          </div>
+          <div class="thumbnail-container" id="thumbnail-container">
+            <!-- Thumbnails will be added by JavaScript -->
+          </div>
+        </div>
+        
+        <div class="product-info">
+          <div id="product-badges" class="product-detail-badges">
+            <!-- Badges will be added by JavaScript -->
+          </div>
+          
+          <h1 id="product-name" class="product-detail-name"></h1>
+          
+          <div class="product-detail-price-rating">
+            <div id="product-price" class="product-detail-price"></div>
+            <div class="product-detail-rating">
+              <div id="product-rating" class="rating-stars"></div>
+              <span id="review-count" class="review-count"></span>
+            </div>
+          </div>
+          
+          <div class="product-detail-description">
+            <p id="product-description"></p>
+          </div>
+          
+          <div class="product-options">
+            <!-- Colors -->
+            <div class="option-group">
+              <h3>Color</h3>
+              <div id="color-options" class="color-selector">
+                <!-- Color options will be added by JavaScript -->
+              </div>
+            </div>
+            
+            <!-- Sizes -->
+            <div class="option-group">
+              <h3>Size</h3>
+              <div id="size-options" class="size-selector">
+                <!-- Size options will be added by JavaScript -->
+              </div>
+              <a href="#size-guide" class="size-guide-link">Size Guide</a>
+            </div>
+            
+            <!-- Quantity -->
+            <div class="option-group">
+              <h3>Quantity</h3>
+              <div class="quantity-selector">
+                <button id="decrease-quantity" class="quantity-btn">-</button>
+                <input type="number" id="quantity" value="1" min="1" max="10">
+                <button id="increase-quantity" class="quantity-btn">+</button>
+              </div>
+            </div>
+            
+            <!-- Add to Cart -->
+            <div class="cart-actions">
+              <button id="add-to-cart" class="btn btn-primary">
+                <i class="fas fa-shopping-bag"></i>
+                Add to Cart
+              </button>
+              <button id="add-to-wishlist" class="btn-wishlist">
+                <i class="far fa-heart"></i>
+              </button>
+            </div>
+            
+            <!-- Stock Status -->
+            <div id="stock-status" class="stock-status"></div>
+            
+            <!-- Additional Info -->
+            <div class="product-meta">
+              <div class="meta-item">
+                <span class="meta-label">SKU:</span>
+                <span id="product-sku" class="meta-value"></span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">Category:</span>
+                <span id="product-category" class="meta-value"></span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">Tags:</span>
+                <span id="product-tags" class="meta-value"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Product Details Tabs -->
+      <div class="product-tabs">
+        <div class="tabs-header">
+          <button class="tab-btn active" data-tab="details">Details</button>
+          <button class="tab-btn" data-tab="fabric">Fabric & Care</button>
+          <button class="tab-btn" data-tab="reviews">Reviews</button>
+          <button class="tab-btn" data-tab="sizing">Sizing</button>
+        </div>
+        
+        <div class="tabs-content">
+          <div id="details" class="tab-content active">
+            <h3>Product Details</h3>
+            <p id="details-content">Loading product details...</p>
+          </div>
+          
+          <div id="fabric" class="tab-content">
+            <h3>Fabric Composition</h3>
+            <p id="fabric-composition">Loading fabric details...</p>
+            
+            <h3>Care Instructions</h3>
+            <ul id="care-instructions" class="care-list">
+              <li class="care-item skeleton"></li>
+              <li class="care-item skeleton"></li>
+              <li class="care-item skeleton"></li>
+            </ul>
+          </div>
+          
+          <div id="reviews" class="tab-content">
+            <div class="reviews-summary">
+              <div class="average-rating">
+                <h3>Customer Reviews</h3>
+                <div class="rating-large">
+                  <span id="rating-average">0.0</span>
+                  <div id="rating-stars-large" class="rating-stars large"></div>
+                </div>
+                <div id="review-total" class="review-total">Based on 0 reviews</div>
+              </div>
+              
+              <div class="write-review">
+                <p>Share your thoughts with other customers</p>
+                <button class="btn btn-secondary">Write a Review</button>
+              </div>
+            </div>
+            
+            <div id="reviews-list" class="reviews-list">
+              <!-- Reviews will be loaded by JavaScript -->
+              <div class="review skeleton"></div>
+              <div class="review skeleton"></div>
+            </div>
+          </div>
+          
+          <div id="sizing" class="tab-content">
+            <h3>Size Guide</h3>
+            <div class="size-guide">
+              <table class="size-table">
+                <thead>
+                  <tr>
+                    <th>Size</th>
+                    <th>Chest (in)</th>
+                    <th>Waist (in)</th>
+                    <th>Hips (in)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>XS</td>
+                    <td>32-34</td>
+                    <td>26-28</td>
+                    <td>34-36</td>
+                  </tr>
+                  <tr>
+                    <td>S</td>
+                    <td>34-36</td>
+                    <td>28-30</td>
+                    <td>36-38</td>
+                  </tr>
+                  <tr>
+                    <td>M</td>
+                    <td>36-38</td>
+                    <td>30-32</td>
+                    <td>38-40</td>
+                  </tr>
+                  <tr>
+                    <td>L</td>
+                    <td>38-40</td>
+                    <td>32-34</td>
+                    <td>40-42</td>
+                  </tr>
+                  <tr>
+                    <td>XL</td>
+                    <td>40-42</td>
+                    <td>34-36</td>
+                    <td>42-44</td>
+                  </tr>
+                  <tr>
+                    <td>XXL</td>
+                    <td>42-44</td>
+                    <td>36-38</td>
+                    <td>44-46</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p class="size-guide-note">Measurements are body measurements, not garment measurements. For a more relaxed fit, we recommend sizing up.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Related Products -->
+      <div class="related-products">
+        <h2 class="section-title">You May Also Like</h2>
+        <div class="products-grid" id="related-products">
+          <!-- Related products will be loaded by JavaScript -->
+          <div class="product-card skeleton"></div>
+          <div class="product-card skeleton"></div>
+          <div class="product-card skeleton"></div>
+          <div class="product-card skeleton"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand Column -->
+        <div class="footer-col">
+          <a href="index.html" class="footer-logo">CARNAGE</a>
+          <p class="footer-description">
+            Sri Lanka's #1 Active & Lifestyle Brand. Premium quality activewear designed for performance and style.
+          </p>
+          <div class="social-icons">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Shop Column -->
+        <div class="footer-col">
+          <h3>Shop</h3>
+          <ul class="footer-links">
+            <li><a href="shop.html?category=oversized-t-shirts">Oversized T-shirts</a></li>
+            <li><a href="shop.html?category=premium-joggers">Premium Joggers</a></li>
+            <li><a href="shop.html?category=leggings">Leggings</a></li>
+            <li><a href="shop.html?category=sports-bras">Sports Bras</a></li>
+            <li><a href="shop.html?category=accessories">Accessories</a></li>
+            <li><a href="shop.html?new=true" class="highlight">New Arrivals</a></li>
+          </ul>
+        </div>
+
+        <!-- Company Column -->
+        <div class="footer-col">
+          <h3>Company</h3>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="loyalty.html">Carnage Crew Loyalty</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="store-locator.html">Store Locator</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Column -->
+        <div class="footer-col">
+          <h3>Contact</h3>
+          <ul class="contact-info">
+            <li>
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Duplication Rd, Colombo, Sri Lanka</span>
+            </li>
+            <li>
+              <i class="fas fa-envelope"></i>
+              <a href="mailto:support@incarnage.com">support@incarnage.com</a>
+            </li>
+            <li>
+              <i class="fas fa-phone"></i>
+              <a href="tel:+94112345678">+94 11 234 5678</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Newsletter -->
+      <div class="newsletter">
+        <div class="newsletter-content">
+          <h3>Join the Carnage Community</h3>
+          <p>Subscribe for exclusive offers, new arrivals, and 10% off your first order.</p>
+        </div>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Your email address" required>
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+      </div>
+
+      <!-- Copyright -->
+      <div class="copyright">
+        <p>&copy; <span id="current-year"></span> Carnage. All rights reserved.</p>
+        <div class="legal-links">
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="terms-of-service.html">Terms of Service</a>
+          <a href="shipping-info.html">Shipping Information</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/product-detail.js"></script>
+</body>
+</html>

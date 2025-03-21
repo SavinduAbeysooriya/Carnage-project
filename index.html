@@ -1,0 +1,337 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carnage - Sri Lanka's #1 Active & Lifestyle Brand</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="dark-mode">
+  <!-- Header/Navbar -->
+  <header class="header">
+    <div class="container">
+      <div class="navbar">
+        <a href="index.html" class="logo">CARNAGE</a>
+        
+        <nav class="nav-menu">
+          <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        
+        <div class="nav-icons">
+          <button id="search-toggle" aria-label="Search">
+            <i class="fas fa-search"></i>
+          </button>
+          <a href="cart.html" class="cart-icon" aria-label="Cart">
+            <i class="fas fa-shopping-bag"></i>
+            <span class="cart-count">0</span>
+          </a>
+          <a href="account.html" class="account-icon hide-mobile" aria-label="Account">
+            <i class="fas fa-user"></i>
+          </a>
+          <button id="theme-toggle" aria-label="Toggle theme">
+            <i class="fas fa-moon"></i>
+          </button>
+          <button id="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="Menu">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+      
+      <div class="search-container" id="search-container">
+        <div class="search-form">
+          <input type="text" placeholder="Search products...">
+          <button type="submit">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="mobile-menu">
+    <div class="mobile-menu-container">
+      <nav class="mobile-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="account.html">Account</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-slides">
+      <div class="hero-slide active">
+        <div class="hero-image" style="background-image: url('https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?q=80&w=2070&auto=format&fit=crop');">
+          <div class="hero-overlay"></div>
+        </div>
+        <div class="container">
+          <div class="hero-content">
+            <div class="badge">Sri Lanka's #1 Active & Lifestyle Brand</div>
+            <h1>Premium Oversized Tees</h1>
+            <p>Comfort meets style in our signature collection</p>
+            <div class="hero-buttons">
+              <a href="shop.html?category=oversized-t-shirts" class="btn btn-primary">Shop Now <i class="fas fa-arrow-right"></i></a>
+              <a href="about.html" class="btn btn-secondary">About Carnage</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-slide">
+        <div class="hero-image" style="background-image: url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=2070&auto=format&fit=crop');">
+          <div class="hero-overlay"></div>
+        </div>
+        <div class="container">
+          <div class="hero-content">
+            <div class="badge">Sri Lanka's #1 Active & Lifestyle Brand</div>
+            <h1>Performance Leggings</h1>
+            <p>Engineered for your toughest workouts</p>
+            <div class="hero-buttons">
+              <a href="shop.html?category=leggings" class="btn btn-primary">Explore Collection <i class="fas fa-arrow-right"></i></a>
+              <a href="about.html" class="btn btn-secondary">About Carnage</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-slide">
+        <div class="hero-image" style="background-image: url('https://images.unsplash.com/photo-1529516548873-9ce57c8f155e?q=80&w=2070&auto=format&fit=crop');">
+          <div class="hero-overlay"></div>
+        </div>
+        <div class="container">
+          <div class="hero-content">
+            <div class="badge">Sri Lanka's #1 Active & Lifestyle Brand</div>
+            <h1>Premium Joggers</h1>
+            <p>The perfect balance of comfort and style</p>
+            <div class="hero-buttons">
+              <a href="shop.html?category=premium-joggers" class="btn btn-primary">View Products <i class="fas fa-arrow-right"></i></a>
+              <a href="about.html" class="btn btn-secondary">About Carnage</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-indicators">
+      <button class="indicator active" data-slide="0"></button>
+      <button class="indicator" data-slide="1"></button>
+      <button class="indicator" data-slide="2"></button>
+    </div>
+  </section>
+
+  <!-- Featured Products Section -->
+  <section class="featured-products section">
+    <div class="container">
+      <div class="section-header">
+        <div>
+          <h2 class="section-title">Featured Collection</h2>
+          <p class="section-description">
+            Discover our handpicked selection of premium active and lifestyle wear, designed for comfort, performance, and style.
+          </p>
+        </div>
+        <a href="shop.html" class="view-all">
+          View All Products
+          <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+
+      <div class="products-grid" id="featured-products-grid">
+        <!-- Products will be loaded by JavaScript -->
+        <div class="product-card skeleton"></div>
+        <div class="product-card skeleton"></div>
+        <div class="product-card skeleton"></div>
+        <div class="product-card skeleton"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials section">
+    <div class="container">
+      <div class="section-header text-center">
+        <h2 class="section-title">What Our Customers Say</h2>
+        <p class="section-description">
+          Hear from fitness enthusiasts and athletes who trust Carnage for their active and lifestyle wear.
+        </p>
+      </div>
+
+      <div class="testimonial-slider" id="testimonial-slider">
+        <!-- Testimonials will be loaded by JavaScript -->
+        <div class="testimonial-slide active">
+          <div class="testimonial-card">
+            <div class="skeleton-testimonial"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-indicators">
+        <!-- Indicators will be added by JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Brand Story Section -->
+  <section class="brand-story section">
+    <div class="container">
+      <div class="brand-story-grid">
+        <div class="brand-story-content">
+          <div class="badge">Our Story</div>
+          <h2 class="section-title">From Passion to Sri Lanka's Premier Activewear Brand</h2>
+          <p>
+            Founded by fitness entrepreneur Joel Tillekeratne, Carnage began as an online store with a 
+            vision to create high-quality activewear that blends performance, comfort, and style.
+          </p>
+          <p>
+            Today, with our flagship store on Duplication Road and presence at Havelock City Mall, 
+            Carnage has become Sri Lanka's leading active and lifestyle clothing brand, trusted by 
+            fitness enthusiasts, athletes, and style-conscious individuals alike.
+          </p>
+          <a href="about.html" class="btn btn-primary">
+            Learn More
+            <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+        
+        <div class="brand-story-image">
+          <img src="https://images.unsplash.com/photo-1507680434567-5739c80be1ac?q=80&w=2070&auto=format&fit=crop" alt="Carnage store">
+          <div class="info-card founded">
+            <div class="year">2018</div>
+            <div class="text">Founded in Colombo</div>
+          </div>
+          <div class="info-card rank">
+            <div class="number">#1</div>
+            <div class="text">Activewear Brand in Sri Lanka</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand Column -->
+        <div class="footer-col">
+          <a href="index.html" class="footer-logo">CARNAGE</a>
+          <p class="footer-description">
+            Sri Lanka's #1 Active & Lifestyle Brand. Premium quality activewear designed for performance and style.
+          </p>
+          <div class="social-icons">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Shop Column -->
+        <div class="footer-col">
+          <h3>Shop</h3>
+          <ul class="footer-links">
+            <li><a href="shop.html?category=oversized-t-shirts">Oversized T-shirts</a></li>
+            <li><a href="shop.html?category=premium-joggers">Premium Joggers</a></li>
+            <li><a href="shop.html?category=leggings">Leggings</a></li>
+            <li><a href="shop.html?category=sports-bras">Sports Bras</a></li>
+            <li><a href="shop.html?category=accessories">Accessories</a></li>
+            <li><a href="shop.html?new=true" class="highlight">New Arrivals</a></li>
+          </ul>
+        </div>
+
+        <!-- Company Column -->
+        <div class="footer-col">
+          <h3>Company</h3>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="loyalty.html">Carnage Crew Loyalty</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="store-locator.html">Store Locator</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Column -->
+        <div class="footer-col">
+          <h3>Contact</h3>
+          <ul class="contact-info">
+            <li>
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Duplication Rd, Colombo, Sri Lanka</span>
+            </li>
+            <li>
+              <i class="fas fa-envelope"></i>
+              <a href="mailto:support@incarnage.com">support@incarnage.com</a>
+            </li>
+            <li>
+              <i class="fas fa-phone"></i>
+              <a href="tel:+94112345678">+94 11 234 5678</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Newsletter -->
+      <div class="newsletter">
+        <div class="newsletter-content">
+          <h3>Join the Carnage Community</h3>
+          <p>Subscribe for exclusive offers, new arrivals, and 10% off your first order.</p>
+        </div>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Your email address" required>
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+      </div>
+
+      <!-- Copyright -->
+      <div class="copyright">
+        <p>&copy; <span id="current-year"></span> Carnage. All rights reserved.</p>
+        <div class="legal-links">
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="terms-of-service.html">Terms of Service</a>
+          <a href="shipping-info.html">Shipping Information</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Newsletter Popup -->
+  <div id="newsletter-popup" class="popup">
+    <div class="popup-content">
+      <button id="close-popup" class="close-popup">
+        <i class="fas fa-times"></i>
+      </button>
+      <div class="popup-body">
+        <div class="badge">Welcome to Carnage</div>
+        <h3>Join Our Community</h3>
+        <p>Subscribe to our newsletter and receive <strong>10% off</strong> your first order.</p>
+        <form id="popup-form">
+          <input type="email" placeholder="Your email address" required>
+          <button type="submit" class="btn btn-primary">Subscribe & Get 10% Off</button>
+          <p class="terms">By subscribing, you agree to our terms and privacy policy. You can unsubscribe at any time.</p>
+        </form>
+      </div>
+      <div class="popup-footer"></div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script src="js/products.js"></script>
+</body>
+</html>

@@ -1,0 +1,377 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop - Carnage | Sri Lanka's #1 Active & Lifestyle Brand</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/shop.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="dark-mode">
+  <!-- Header/Navbar -->
+  <header class="header scrolled">
+    <div class="container">
+      <div class="navbar">
+        <a href="index.html" class="logo">CARNAGE</a>
+        
+        <nav class="nav-menu">
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="shop.html" class="active">Shop</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        
+        <div class="nav-icons">
+          <button id="search-toggle" aria-label="Search">
+            <i class="fas fa-search"></i>
+          </button>
+          <a href="cart.html" class="cart-icon" aria-label="Cart">
+            <i class="fas fa-shopping-bag"></i>
+            <span class="cart-count">0</span>
+          </a>
+          <a href="account.html" class="account-icon hide-mobile" aria-label="Account">
+            <i class="fas fa-user"></i>
+          </a>
+          <button id="theme-toggle" aria-label="Toggle theme">
+            <i class="fas fa-moon"></i>
+          </button>
+          <button id="mobile-menu-toggle" class="mobile-menu-toggle" aria-label="Menu">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+      
+      <div class="search-container" id="search-container">
+        <div class="search-form">
+          <input type="text" placeholder="Search products...">
+          <button type="submit">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="mobile-menu">
+    <div class="mobile-menu-container">
+      <nav class="mobile-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="account.html">Account</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Shop Page Content -->
+  <section class="shop-container section">
+    <div class="container">
+      <div class="shop-header">
+        <h1>Shop Carnage</h1>
+        <p>Discover our premium active and lifestyle wear designed for comfort, performance, and style. Every piece is crafted with quality materials to help you look and feel your best.</p>
+      </div>
+      
+      <div class="shop-layout">
+        <!-- Filters -->
+        <div class="shop-sidebar">
+          <div class="filter-group">
+            <button class="filter-toggle">
+              <span>Filters</span>
+              <i class="fas fa-filter"></i>
+            </button>
+          </div>
+          
+          <div class="filter-content">
+            <!-- Categories -->
+            <div class="filter-section">
+              <h3>Categories</h3>
+              <div class="filter-options">
+                <label class="filter-option">
+                  <input type="checkbox" value="oversized-t-shirts">
+                  <span>Oversized T-shirts</span>
+                </label>
+                <label class="filter-option">
+                  <input type="checkbox" value="premium-joggers">
+                  <span>Premium Joggers</span>
+                </label>
+                <label class="filter-option">
+                  <input type="checkbox" value="leggings">
+                  <span>Leggings</span>
+                </label>
+                <label class="filter-option">
+                  <input type="checkbox" value="graphic-t-shirts">
+                  <span>Graphic T-shirts</span>
+                </label>
+                <label class="filter-option">
+                  <input type="checkbox" value="sports-bras">
+                  <span>Sports Bras</span>
+                </label>
+                <label class="filter-option">
+                  <input type="checkbox" value="biker-shorts">
+                  <span>Biker Shorts</span>
+                </label>
+                <label class="filter-option">
+                  <input type="checkbox" value="accessories">
+                  <span>Accessories</span>
+                </label>
+              </div>
+            </div>
+            
+            <!-- Gender -->
+            <div class="filter-section">
+              <h3>Gender</h3>
+              <div class="filter-options">
+                <label class="filter-option">
+                  <input type="checkbox" value="men">
+                  <span>Men</span>
+                </label>
+                <label class="filter-option">
+                  <input type="checkbox" value="women">
+                  <span>Women</span>
+                </label>
+                <label class="filter-option">
+                  <input type="checkbox" value="unisex">
+                  <span>Unisex</span>
+                </label>
+              </div>
+            </div>
+            
+            <!-- Size -->
+            <div class="filter-section">
+              <h3>Size</h3>
+              <div class="filter-options size-options">
+                <label class="size-option">
+                  <input type="checkbox" value="xs">
+                  <span>XS</span>
+                </label>
+                <label class="size-option">
+                  <input type="checkbox" value="s">
+                  <span>S</span>
+                </label>
+                <label class="size-option">
+                  <input type="checkbox" value="m">
+                  <span>M</span>
+                </label>
+                <label class="size-option">
+                  <input type="checkbox" value="l">
+                  <span>L</span>
+                </label>
+                <label class="size-option">
+                  <input type="checkbox" value="xl">
+                  <span>XL</span>
+                </label>
+                <label class="size-option">
+                  <input type="checkbox" value="xxl">
+                  <span>XXL</span>
+                </label>
+              </div>
+            </div>
+            
+            <!-- Colors -->
+            <div class="filter-section">
+              <h3>Color</h3>
+              <div class="filter-options color-options">
+                <label class="color-option" style="--color: #000000">
+                  <input type="checkbox" value="black">
+                  <span class="color-circle"></span>
+                  <span class="color-name">Black</span>
+                </label>
+                <label class="color-option" style="--color: #FFFFFF">
+                  <input type="checkbox" value="white">
+                  <span class="color-circle"></span>
+                  <span class="color-name">White</span>
+                </label>
+                <label class="color-option" style="--color: #BDB76B">
+                  <input type="checkbox" value="khaki">
+                  <span class="color-circle"></span>
+                  <span class="color-name">Khaki</span>
+                </label>
+                <label class="color-option" style="--color: #000080">
+                  <input type="checkbox" value="navy">
+                  <span class="color-circle"></span>
+                  <span class="color-name">Navy</span>
+                </label>
+                <label class="color-option" style="--color: #800020">
+                  <input type="checkbox" value="burgundy">
+                  <span class="color-circle"></span>
+                  <span class="color-name">Burgundy</span>
+                </label>
+                <label class="color-option" style="--color: #808080">
+                  <input type="checkbox" value="gray">
+                  <span class="color-circle"></span>
+                  <span class="color-name">Gray</span>
+                </label>
+              </div>
+            </div>
+            
+            <!-- Price Range -->
+            <div class="filter-section">
+              <h3>Price Range</h3>
+              <div class="price-range">
+                <div class="price-inputs">
+                  <div>
+                    <label>Min</label>
+                    <input type="number" id="min-price" placeholder="0" min="0">
+                  </div>
+                  <div>
+                    <label>Max</label>
+                    <input type="number" id="max-price" placeholder="10000" min="0">
+                  </div>
+                </div>
+                <button class="btn-apply">Apply</button>
+              </div>
+            </div>
+            
+            <!-- Clear Filters -->
+            <button id="clear-filters" class="btn-clear">Clear All Filters</button>
+          </div>
+        </div>
+        
+        <!-- Products Grid -->
+        <div class="shop-products">
+          <!-- Sorting Options -->
+          <div class="shop-controls">
+            <div class="product-count">
+              <span id="product-count">0</span> Products
+            </div>
+            <div class="sorting-options">
+              <label for="sort-by">Sort by:</label>
+              <select id="sort-by">
+                <option value="featured">Featured</option>
+                <option value="newest">Newest</option>
+                <option value="price-low">Price: Low to High</option>
+                <option value="price-high">Price: High to Low</option>
+                <option value="best-selling">Best Selling</option>
+              </select>
+            </div>
+          </div>
+          
+          <!-- Products Grid -->
+          <div class="products-grid" id="products-grid">
+            <!-- Products will be loaded by JavaScript -->
+            <div class="product-card skeleton"></div>
+            <div class="product-card skeleton"></div>
+            <div class="product-card skeleton"></div>
+            <div class="product-card skeleton"></div>
+            <div class="product-card skeleton"></div>
+            <div class="product-card skeleton"></div>
+            <div class="product-card skeleton"></div>
+            <div class="product-card skeleton"></div>
+          </div>
+          
+          <!-- No Results Message -->
+          <div id="no-results" class="no-results" style="display: none;">
+            <i class="fas fa-search"></i>
+            <h3>No products found</h3>
+            <p>Try adjusting your filters or search term</p>
+            <button id="reset-filters" class="btn btn-primary">Reset Filters</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand Column -->
+        <div class="footer-col">
+          <a href="index.html" class="footer-logo">CARNAGE</a>
+          <p class="footer-description">
+            Sri Lanka's #1 Active & Lifestyle Brand. Premium quality activewear designed for performance and style.
+          </p>
+          <div class="social-icons">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Shop Column -->
+        <div class="footer-col">
+          <h3>Shop</h3>
+          <ul class="footer-links">
+            <li><a href="shop.html?category=oversized-t-shirts">Oversized T-shirts</a></li>
+            <li><a href="shop.html?category=premium-joggers">Premium Joggers</a></li>
+            <li><a href="shop.html?category=leggings">Leggings</a></li>
+            <li><a href="shop.html?category=sports-bras">Sports Bras</a></li>
+            <li><a href="shop.html?category=accessories">Accessories</a></li>
+            <li><a href="shop.html?new=true" class="highlight">New Arrivals</a></li>
+          </ul>
+        </div>
+
+        <!-- Company Column -->
+        <div class="footer-col">
+          <h3>Company</h3>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="loyalty.html">Carnage Crew Loyalty</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="store-locator.html">Store Locator</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Column -->
+        <div class="footer-col">
+          <h3>Contact</h3>
+          <ul class="contact-info">
+            <li>
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Duplication Rd, Colombo, Sri Lanka</span>
+            </li>
+            <li>
+              <i class="fas fa-envelope"></i>
+              <a href="mailto:support@incarnage.com">support@incarnage.com</a>
+            </li>
+            <li>
+              <i class="fas fa-phone"></i>
+              <a href="tel:+94112345678">+94 11 234 5678</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Newsletter -->
+      <div class="newsletter">
+        <div class="newsletter-content">
+          <h3>Join the Carnage Community</h3>
+          <p>Subscribe for exclusive offers, new arrivals, and 10% off your first order.</p>
+        </div>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Your email address" required>
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+      </div>
+
+      <!-- Copyright -->
+      <div class="copyright">
+        <p>&copy; <span id="current-year"></span> Carnage. All rights reserved.</p>
+        <div class="legal-links">
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="terms-of-service.html">Terms of Service</a>
+          <a href="shipping-info.html">Shipping Information</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/shop.js"></script>
+</body>
+</html>
